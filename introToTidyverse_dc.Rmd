@@ -1,0 +1,41 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+
+```{r setup}
+##install.packages("gapminder")
+# Load the gapminder package
+library(gapminder)
+
+# Load the dplyr package
+library(dplyr)
+
+# Look at the gapminder dataset
+gapminder <- as.tibble(gapminder)
+
+gapminder
+
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+```{r filter}
+
+gapminder %>% 
+  filter(year == 2007)
+
+gapminder %>% 
+  filter(country == "United States")
+
+
+gapminder %>% 
+  filter(year == 2007, country == "United States")
+
+```
+
+ 
+```{r filterExercises}
+
+```
